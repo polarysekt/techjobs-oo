@@ -55,7 +55,8 @@ public class JobController {
                     jobData.getPositionTypes().findById( jobForm.getPositionTypeId() ),
                     jobData.getCoreCompetencies().findById( jobForm.getCoreCompetencyId() ) );
 
-
+        jobData.add( newJob );
+        model.addAttribute("job", newJob);
         return "job-detail";
 
     }
