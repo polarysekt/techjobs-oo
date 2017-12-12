@@ -42,11 +42,10 @@ public class JobController {
         // new Job and add it to the jobData data store. Then
         // redirect to the job detail view for the new Job.
         Job newJob;
-        boolean isGoodData = true;
 
-        if( !isGoodData ) {
-            model.addAttribute( "errors", errors );
-            model.addAttribute( "jobForm", jobForm );
+        if( errors.hasErrors() ) {
+            //model.addAttribute( "errors", errors );
+            //model.addAttribute( "jobForm", jobForm );
             return "new-job";
         }
 
@@ -56,6 +55,7 @@ public class JobController {
                     jobData.getCoreCompetencies().findById( jobForm.getCoreCompetencyId() ) );
 
         jobData.add( newJob );
+
         model.addAttribute("job", newJob);
         return "job-detail";
 
