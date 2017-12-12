@@ -28,14 +28,39 @@ public class JobForm {
         Don't forget to add getters and setters
      */
 
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
+    }
+
+    public int getCoreCompetencyId() {
+        return coreCompetencyId;
+    }
+
+    public void setCoreCompetencyId(int coreCompetencyId) {
+        this.coreCompetencyId = coreCompetencyId;
+    }
+
+
     @NotNull
     private int locationId;
 
     @NotNull
     private int coreCompetencyId;
 
+    public int getPositionTypeId() {
+        return positionTypeId;
+    }
+
+    public void setPositionTypeId(int positionTypeId) {
+        this.positionTypeId = positionTypeId;
+    }
+
     @NotNull
-    private int positionType;
+    private int positionTypeId;
 
 
     private ArrayList<Employer> employers;
